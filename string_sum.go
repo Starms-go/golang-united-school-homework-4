@@ -44,8 +44,8 @@ func StringSum(input string) (output string, err error) {
 
 	for _, y := range inputA {
 		v, e := strconv.Atoi(y)
-		err := fmt.Errorf("bad token. %w", e)
-		if err != nil {
+		err := fmt.Errorf("%w", e)
+		if e != nil {
 			fmt.Println(err.Error())
 			return "", err
 		} else {
